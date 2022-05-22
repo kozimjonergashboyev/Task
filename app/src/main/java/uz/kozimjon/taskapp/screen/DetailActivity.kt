@@ -25,8 +25,13 @@ class DetailActivity : AppCompatActivity() {
         val tvSpecies: TextView = findViewById(R.id.tvSpecies)
         val tvType: TextView = findViewById(R.id.tvType)
         val tvGender: TextView = findViewById(R.id.tvGender)
+        val ivBack: ImageView = findViewById(R.id.ivBack)
 
         val data = intent.extras?.get("data") as CharacterData
+
+        ivBack.setOnClickListener {
+            finish()
+        }
 
         tvName.text = data.name
         tvStatus.text = data.status
